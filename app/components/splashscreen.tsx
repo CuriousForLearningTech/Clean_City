@@ -1,0 +1,1 @@
+// Here we will make the splash screen of the app
