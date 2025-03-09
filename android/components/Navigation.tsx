@@ -2,10 +2,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import HomeScreen from './HomeScreen';
-import MapScreen from './MapScreen';
-import TrackScreen from './TrackScreen';
-import ProfileScreen from './ProfileScreen';
+import HomeScreen from '../app/(tabs)/HomeScreen';
+import MapScreen from '../app/(tabs)/MapScreen';
+import TrackScreen from '../app/(tabs)/TrackScreen';
+import ProfileScreen from '../app/(tabs)/ProfileScreen';
 
 
 type RootTabParamList = {
@@ -19,7 +19,7 @@ const Tab = createBottomTabNavigator<RootTabParamList>();
 
 const Navigator: React.FC = () => {
     return (
-        <NavigationContainer>
+        <NavigationContainer >
             <Tab.Navigator
                 initialRouteName="Home"
                 screenOptions={({ route }) => ({
@@ -48,11 +48,15 @@ const Navigator: React.FC = () => {
                     },
                 })}
             >
-                <Tab.Screen name="Home" component={HomeScreen} />
+                <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
                 <Tab.Screen name="Map" component={MapScreen} />
                 <Tab.Screen name="Track" component={TrackScreen} />
                 <Tab.Screen name="Profile" component={ProfileScreen} />
             </Tab.Navigator>
+            {/* <Stack.Navigator initialRouteName='login'>
+        <Stack.Screen name='login' component={LoginScreen} options={{ headerShown: false }} />
+        <Stack.Screen name='login' component={SignUpScreen} options={{ headerShown: false }} />
+      </Stack.Navigator> */}
         </NavigationContainer>
     );
 };

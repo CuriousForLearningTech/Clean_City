@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "android",
-    "slug": "android",
+    "name": "cleancity",
+    "slug": "cleancity",
+    "scheme": "cleancity",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/CleanCity.png",

@@ -1,7 +1,7 @@
 {
   "name": "android",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -9,28 +9,35 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@babel/runtime": "^7.26.9",
     "@react-navigation/bottom-tabs": "^7.2.1",
     "@react-navigation/elements": "^2.2.6",
     "@react-navigation/native": "^7.0.15",
     "@react-navigation/native-stack": "^7.2.1",
     "dotenv": "^16.4.7",
     "expo": "~52.0.37",
+    "expo-router": "^4.0.17",
     "expo-splash-screen": "~0.29.22",
     "expo-status-bar": "~2.0.1",
     "firebase": "^11.4.0",
+    "nativewind": "^4.1.23",
     "phosphor-react-native": "^2.3.1",
     "react": "18.3.1",
     "react-native": "0.76.7",
-    "react-native-safe-area-context": "^4.12.0",
+    "react-native-reanimated": "^3.16.2",
+    "react-native-safe-area-context": "^4.14.1",
     "react-native-screens": "~4.4.0",
     "react-native-splash-screen": "^3.3.0",
     "react-native-svg": "^15.11.2",
-    "react-native-vector-icons": "^10.2.0"
+    "react-native-vector-icons": "^10.2.0",
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.9",
     "@types/react": "~18.3.12",
     "@types/react-native-vector-icons": "^6.4.18",
+    "metro-react-native-babel-preset": "^0.77.0",
     "typescript": "^5.3.3"
   },
   "private": true

@@ -1,0 +1,32 @@
+import { useCallback, useEffect, useState } from 'react';
+import * as SplashScreen from 'expo-splash-screen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import LoginScreen from './app/(auth)/login';
+import { SignIn } from 'phosphor-react-native';
+import SignUpScreen from './app/(auth)/Signup';
+import HomeScreen from './app/(tabs)/HomeScreen';
+import MapScreen from './app/(tabs)/MapScreen';
+import TrackScreen from './app/(tabs)/TrackScreen';
+import ProfileScreen from './app/(tabs)/ProfileScreen';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import "./global.css";
+
+import { View, Text, StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
+import Navigator from './app/(tabs)/Navigation';
+
+// Set the animation options. This is optional.
+SplashScreen.setOptions({
+  duration: 1000,
+  fade: true,
+});
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <Navigator />
+  );
+}

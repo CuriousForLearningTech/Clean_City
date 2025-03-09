@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
 
 const HomeScreen: React.FC = () => {
     return (
         <View style={styles.container}>
-            <Text style={styles.header}>Welcome to Home</Text>
+            <Text className='text-xl' >Welcome to Home</Text>
             <Text style={styles.text}>This is your home screen.</Text>
+            <Link href="/home"> Home</Link>
         </View>
     );
 };
