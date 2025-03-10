@@ -12,23 +12,11 @@ SplashScreen.setOptions({
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <Text className='bg-red-700 text-white text-3xl font-light' style={styles.text}>
+        <View >
+            <Text className='bg-red-700 text-white text-3xl font-light' >
                 Hello Setup
             </Text>
-            <Link href="/(tabs)/HomeScreen" style={{ color: 'blue' }}> home</Link>
+            <Link href="/(auth)/login" style={{ color: 'blue' }}> home</Link>
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 20,
-    }, text: {
-        fontSize: 24,
-        fontWeight: 200,
-    }
-})
